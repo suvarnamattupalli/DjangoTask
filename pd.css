@@ -1,0 +1,76 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f9ff; /* Soft blue for a calming effect */
+    color: #333; /* Neutral dark text color */
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #0077b6; /* Deep blue for emphasis */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+/* Paragraphs */
+p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555; /* Subtle gray for text */
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+}
+
+/* Links and Buttons */
+a, button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0077b6; /* Deep blue for buttons/links */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a:hover, button:hover {
+    background-color: #005f8a; /* Slightly darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .dashboard-container {
+        padding: 15px;
+    }
+}

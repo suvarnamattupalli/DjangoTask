@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/h.css' %}">
+</head>
+<body>
+    <h1>Welcome to the Home Page!</h1>
+    <p><a href="{% url 'signup' %}">Go to Signup</a></p>
+    <p><a href="{% url 'login' %}">Go to Login</a></p>
+</body>
+</html>

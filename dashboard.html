@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dd.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome, {{ user.username }}</h2>
+        <p>Role: {{ user.profile.role }}</p>
+        <p>Address: {{ user.profile.address }}</p>
+        <img src="{{ user.profile.profile_picture.url }}" alt="Profile Picture">
+    </div>
+</body>
+</html>

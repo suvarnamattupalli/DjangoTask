@@ -1,0 +1,64 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue for a welcoming feel */
+    color: #333; /* Neutral dark color for text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 3em;
+    color: #1e90ff; /* Dodger blue for the header */
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    background-color: #1e90ff; /* Dodger blue background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #104e8b; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    a {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
