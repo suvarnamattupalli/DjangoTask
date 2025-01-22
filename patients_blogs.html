@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Patient Blog Posts</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/pb.css' %}">
+    </head>
+<body>
+    <h2>Blog Posts</h2>
+
+    {% for category in categories %}
+        <h3>{{ category }}</h3>
+        <ul>
+            {% for blog in blogs %}
+                {% if blog.category == category %}
+                    <li>
+                        <h4>{{ blog.title }}</h4>
+                        {% if blog.image %}
+                            <img src="{{ blog.image.url }}" alt="Blog Image" width="100">
+                        {% endif %}
+                        <p><strong>Summary:</strong> {{ blog.summary }}</p>
+                        <p><strong>Category:</strong> {{ blog.category }}</p>
+                        <p><em>By {{ blog.author.username }} on {{ blog.created_at }}</em></p>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/db.css' %}">
+</head>
+
+    <h1>Your Blog Posts</h1>
+
+    <ul>
+        {% for blog in blogs %}
+            <li>
+                <h3>{{ blog.title }}</h3>
+                <p>{{ blog.summary }}</p>
+                <a href="{% url 'view_blog' blog.id %}">Read More</a>
+            </li>
+        {% empty %}
+            <p>You haven't created any blog posts yet.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

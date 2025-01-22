@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Blog Posts</h1>
+    <ul>
+        {% for blog in blogs %}
+            <li>
+                <h3>{{ blog.title }}</h3>
+                {% if blog.image %}
+                    <img src="{{ blog.image.url }}" alt="Blog Image" width="100" height="100">
+                {% endif %}
+                <p>{{ blog.summary|truncatewords:15 }}</p>
+                <p><strong>Category:</strong> {{ blog.category }}</p>
+                <p><em>By {{ blog.author.username }} on {{ blog.created_at }}</em></p>
+                <a href="{% url 'blog_detail' blog.id %}">Read More</a>
+            </li>
+        {% empty %}
+            <p>No blog posts available.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

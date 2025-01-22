@@ -8,9 +8,14 @@
 <body>
     <div class="container">
         <h2>Welcome, {{ user.username }}</h2>
-        <p>Role: {{ user.profile.role }}</p>
-        <p>Address: {{ user.profile.address }}</p>
-        <img src="{{ user.profile.profile_picture.url }}" alt="Profile Picture">
+        <p><strong>Role:</strong> {{ user.profile.role }}</p>
+        <p><strong>Address:</strong> {{ user.profile.address }}</p>
+        
+        {% if user.profile.profile_picture %}
+            <img src="{{ user.profile.profile_picture.url }}" alt="Profile Picture" class="profile-picture">
+        {% else %}
+            <p>No profile picture available.</p>
+        {% endif %}
     </div>
 </body>
 </html>

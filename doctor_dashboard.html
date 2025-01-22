@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-    {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <title>Doctor Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/dd.css' %}">
-</head>
-<body>
-    <div class="container">
-        <h2>Welcome, Doctor!</h2>
-        <p>Your doctor dashboard.</p>
-    </div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Welcome to the Doctor Dashboard</h1>
+<p>Click below to create a new blog post:</p>
+{% if user.is_authenticated and user.user_type == 'doctor' %}
+    <a href="{% url 'create_blog_post' %}" class="create-blog-btn">Create New Blog</a>
+{% else %}
+    <p class="no-access-message">You do not have access to create a blog post.</p>
+{% endif %}
+
+{% endblock %}
